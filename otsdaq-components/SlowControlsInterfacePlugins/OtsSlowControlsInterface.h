@@ -34,6 +34,6 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	std::array<std::string, 9>            getSettings(const std::string& Name);
 };
 
-//}
-
+///}
+///
 #endif

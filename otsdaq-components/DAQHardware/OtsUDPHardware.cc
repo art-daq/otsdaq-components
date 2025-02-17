@@ -7,7 +7,7 @@
 using namespace ots;
 
 //==============================================================================
-// This one is often (e.g. FENIMPlusInterface) called by FEs inheriting OtsUDPHardware
+/// This one is often (e.g. FENIMPlusInterface) called by FEs inheriting OtsUDPHardware
 OtsUDPHardware::OtsUDPHardware(std::string  boardIPAddress,
                                unsigned int boardPort,
                                unsigned int version,
@@ -262,7 +262,7 @@ void OtsUDPHardware::writeAndAcknowledge(const std::vector<std::string>& buffer,
 }
 
 //==============================================================================
-// return -1 on failure
+/// return -1 on failure
 void OtsUDPHardware::read(const std::string& sendBuffer,
                           std::string&       receiveBuffer,
                           int                timeoutSeconds)
@@ -435,12 +435,12 @@ void OtsUDPHardware::read(const std::vector<std::string>&      sendBuffers,
 }
 
 //==============================================================================
-// clearReadSocket
-//
-//	flushes read socket.
-//
-//	reads from read socket until timeout is reached (remove stale packets)
-// returns count of packets that were cleared
+/// clearReadSocket
+///
+///	flushes read socket.
+///
+///	reads from read socket until timeout is reached (remove stale packets)
+/// returns count of packets that were cleared
 int OtsUDPHardware::clearReadSocket()
 {
 	std::string dummerReceiveBuffer;

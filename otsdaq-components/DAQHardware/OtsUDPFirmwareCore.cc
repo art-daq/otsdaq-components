@@ -14,14 +14,14 @@
 #include <iomanip>
 #include <iostream>
 //#include
-//"otsdaq-components/UserConfigurationDataFormats/FEOtsUDPFSSRInterfaceTable.h"
-
+///"otsdaq-components/UserConfigurationDataFormats/FEOtsUDPFSSRInterfaceTable.h"
+///
 using namespace ots;
 
 /////////////////////////////////=======================================
-// ADDRESS SPACE
-//	http://otsdaq.fnal.gov/docs/oei_address_space.html
-// field size (bits)
+/// ADDRESS SPACE
+///	http://otsdaq.fnal.gov/docs/oei_address_space.html
+/// field size (bits)
 #define UDP_CORE_BLOCK_ADDRESS ((uint64_t)(0x1) << 32)
 #define ADDR_SELF_UPPER_IP (uint64_t)(0x0)  // 24
 #define ADDR_SELF_LOWER_IP (uint64_t)(0x1)  // 8
@@ -41,7 +41,7 @@ using namespace ots;
 #define ADDR_SELF_VERSION (uint64_t)(0x64)      // 16 (read only)
 #define ADDR_SELF_RESET (uint64_t)(0xFFFFFFFF)  // 1  (write only)
 
-// end ADDRESS SPACE
+/// end ADDRESS SPACE
 /////////////////////////////////=======================================
 
 const uint8_t OtsUDPFirmwareCore::FIFO_ADDRESS_CMD_TYPE = (1 << 3);
@@ -94,8 +94,8 @@ void OtsUDPFirmwareCore::write(std::string& buffer,
 }
 
 //==============================================================================
-// OtsUDPFirmwareCore::writeAdvanced
-//	size is in units of quad-words (8-Bytes)
+/// OtsUDPFirmwareCore::writeAdvanced
+///	size is in units of quad-words (8-Bytes)
 void OtsUDPFirmwareCore::OtsUDPFirmwareCore::writeAdvanced(std::string& buffer,
                                                            const char*  address,
                                                            const char*  data,
@@ -149,9 +149,9 @@ void OtsUDPFirmwareCore::OtsUDPFirmwareCore::writeAdvanced(std::string& buffer,
 }
 
 //==============================================================================
-// OtsUDPFirmwareCore::writeAdvanced
-// 	Note: size is required, to remove ambiguity when calling
-// OtsUDPFirmwareCore::writeAdvanced with data=0
+/// OtsUDPFirmwareCore::writeAdvanced
+/// 	Note: size is required, to remove ambiguity when calling
+/// OtsUDPFirmwareCore::writeAdvanced with data=0
 void OtsUDPFirmwareCore::OtsUDPFirmwareCore::writeAdvanced(std::string&    buffer,
                                                            const uint64_t& address,
                                                            const char*     data,
@@ -328,7 +328,7 @@ void OtsUDPFirmwareCore::setControlDestination(std::string&       buffer,
 }
 
 //==============================================================================
-// return data lower 32 bits
+/// return data lower 32 bits
 uint32_t OtsUDPFirmwareCore::createRegisterFromValue(std::string& /*readBuffer*/,
                                                      std::string& receivedValue)
 {

@@ -11,8 +11,8 @@
 
 namespace ots
 {
-// public virtual inheritance only inherits the base class WorkLoop (and others) members
-// once)
+/// public virtual inheritance only inherits the base class WorkLoop (and others) members
+/// once)
 class FEOtsUDPProducerTemplateInterface
     :  // public FEVInterface, public OtsUDPHardware, public OtsUDPFirmwareDataGen
        public FEProducerVInterface,
@@ -37,11 +37,11 @@ class FEOtsUDPProducerTemplateInterface
 	virtual void universalWrite(char* address, char* writeValue) override;
 
   private:
-  public:  // FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using
+  public:  ///< FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using
 	       // MacroMaker.
 	void varTest(__ARGS__);
 
-  public:  // FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using
+  public:  ///< FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using
 	       // MacroMaker.
 	void varTest2(__ARGS__);
 };

@@ -11,11 +11,11 @@ class FSSRDACsConfiguration : public DACsTableBase
 	FSSRDACsConfiguration(void);
 	virtual ~FSSRDACsConfiguration(void);
 
-	// Methods
-	// void init(ConfigurationManager *configManager);
-
-	// Getters
-
+	/// Methods
+	/// void init(ConfigurationManager *configManager);
+	///
+	/// Getters
+	///
   private:
 	enum
 	{

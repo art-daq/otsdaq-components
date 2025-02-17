@@ -12,10 +12,10 @@ class FEOtsUDPLCLS2InterfaceTable : public FEInterfaceTableBase
 	FEOtsUDPLCLS2InterfaceTable(void);
 	virtual ~FEOtsUDPLCLS2InterfaceTable(void);
 
-	// Methods
+	/// Methods
 	void init(ConfigurationManager* configManager);
 
-	// Getters
+	/// Getters
 	bool         getStatus(std::string interfaceID) const;
 	bool         getChannelStatus(std::string interfaceID, unsigned int channel) const;
 	unsigned int getFirmwareVersion(std::string interfaceID) const;

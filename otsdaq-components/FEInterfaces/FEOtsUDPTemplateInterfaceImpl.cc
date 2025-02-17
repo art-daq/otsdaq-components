@@ -258,7 +258,7 @@ void FEOtsUDPTemplateInterface::configure(void)
 }  // end configure()
 
 //==============================================================================
-// void FEOtsUDPTemplateInterface::configureDetector(const DACStream& theDACStream)
+/// void FEOtsUDPTemplateInterface::configureDetector(const DACStream& theDACStream)
 //{
 //	__FE_COUT__ << "\tconfigureDetector" << __E__;
 //}
@@ -400,8 +400,8 @@ bool FEOtsUDPTemplateInterface::running(void)
 }
 
 //==============================================================================
-// NOTE: buffer for address must be at least size universalAddressSize_
-// NOTE: buffer for returnValue must be max UDP size to handle return possibility
+/// NOTE: buffer for address must be at least size universalAddressSize_
+/// NOTE: buffer for returnValue must be max UDP size to handle return possibility
 void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnValue)
 {
 	__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
@@ -427,8 +427,8 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 }  // end universalRead()
 
 //==============================================================================
-// NOTE: buffer for address must be at least size universalAddressSize_
-// NOTE: buffer for writeValue must be at least size universalDataSize_
+/// NOTE: buffer for address must be at least size universalAddressSize_
+/// NOTE: buffer for writeValue must be at least size universalDataSize_
 void ots::FEOtsUDPTemplateInterface::universalWrite(char* address, char* writeValue)
 {
 	__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
@@ -448,9 +448,9 @@ void ots::FEOtsUDPTemplateInterface::universalWrite(char* address, char* writeVa
 }  // end universalWrite()
 
 //==============================================================================
-// varTest
-//	FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using MacroMaker.
-//	Macro Notes: This is a great test!
+/// varTest
+///	FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using MacroMaker.
+///	Macro Notes: This is a great test!
 void FEOtsUDPTemplateInterface::varTest(__ARGS__)
 {
 	__FE_COUT__ << "# of input args = " << argsIn.size() << __E__;
@@ -515,9 +515,9 @@ void FEOtsUDPTemplateInterface::varTest(__ARGS__)
 }  // end varTest()
 
 //==============================================================================
-// varTest2
-//	FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using MacroMaker.
-//	Macro Notes: [Modified 14:28 10/11/2018] This is a great test!
+/// varTest2
+///	FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using MacroMaker.
+///	Macro Notes: [Modified 14:28 10/11/2018] This is a great test!
 void FEOtsUDPTemplateInterface::varTest2(__ARGS__)
 {
 	__FE_COUT__ << "# of input args = " << argsIn.size() << __E__;
@@ -536,9 +536,9 @@ void FEOtsUDPTemplateInterface::varTest2(__ARGS__)
 }  // end varTest2()
 
 //========================================================================================================================
-// test
-//	FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
-//	Macro Notes: Testing notes
+/// test
+///	FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
+///	Macro Notes: Testing notes
 void FEOtsUDPTemplateInterface::test(__ARGS__)
 {
 	__CFG_COUT__ << "# of input args = " << argsIn.size() << __E__;

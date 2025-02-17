@@ -12,10 +12,10 @@ class FEPurdueNetworkMasterInterfaceTable : public FEInterfaceTableBase
 	FEPurdueNetworkMasterInterfaceTable(void);
 	virtual ~FEPurdueNetworkMasterInterfaceTable(void);
 
-	// Methods
+	/// Methods
 	void init(ConfigurationManager* configManager);
 
-	// Getters
+	/// Getters
 	bool         getStatus(std::string interfaceID) const;
 	unsigned int getFirmwareVersion(std::string interfaceID) const;
 	std::string  getIPAddress(std::string interfaceID) const;

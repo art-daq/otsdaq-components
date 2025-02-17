@@ -101,8 +101,8 @@ ots::FECommanderInterface::~FECommanderInterface(void)
 } //end destructor()
 
 //==============================================================================
-// AppStatusWorkLoop
-//	child thread
+/// AppStatusWorkLoop
+///	child thread
 void FECommanderInterface::AppStatusWorkLoop(FECommanderInterface* fePtr)
 {
 	__COUT__ << "Started remote status checking loop..." << __E__;
@@ -133,10 +133,10 @@ void FECommanderInterface::AppStatusWorkLoop(FECommanderInterface* fePtr)
 }  // end AppStatusWorkLoop()
 
 //==============================================================================
-// virtual progress string that can be overridden with more info
-//	e.g. steps and substeps
-//	however integer 0-100 should be first number, then separated by : colons
-//	e.g. 94:FE0:1:2
+/// virtual progress string that can be overridden with more info
+///	e.g. steps and substeps
+///	however integer 0-100 should be first number, then separated by : colons
+///	e.g. 94:FE0:1:2
 std::string FECommanderInterface::getStatusProgressDetail(void)
 {
 	std::lock_guard<std::mutex> lock(remoteAppStatusMutex_);	
