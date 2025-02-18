@@ -29,43 +29,43 @@ ConfigurationKey(configurationKeyValue_);
 
     ////////////////////////////////////////////////////////////////
     //INSERTED GLOBALLY IN THE CODE
-//	ConfigurationManager*   theConfigurationManager_ = new ConfigurationManager;
-//	FEWInterfacesManager    theFEWInterfacesManager_(theConfigurationManager_,
+///	ConfigurationManager*   theConfigurationManager_ = new ConfigurationManager;
+///	FEWInterfacesManager    theFEWInterfacesManager_(theConfigurationManager_,
 supervisorInstance_);
-//
-//
+///
+///
 theConfigurationManager_->setupFEWSupervisorConfiguration(theConfigurationKey_,supervisorInstance_);
-//	theFEWInterfacesManager_.configure();
+///	theFEWInterfacesManager_.configure();
     ////////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////////
     //Getting just the informations about the FEWInterface
 
-//	const int fecInterfaceNumber_ = 0;
-//	ConfigurationInterface* theInterface_;
-//	theInterface_ = ConfigurationInterface::getInstance(true);//FIXME This will be
+///	const int fecInterfaceNumber_ = 0;
+///	ConfigurationInterface* theInterface_;
+///	theInterface_ = ConfigurationInterface::getInstance(true);//FIXME This will be
 variable because if false it takes it from the database
-//	Configurations* configurations = 0;
-//	theInterface_->get(configurations);
-//	FEConfiguration* frontEndConfiguration = 0;
-//	theInterface_->get(frontEndConfiguration, theConfigurationKey_, configurations);
-//	FEWOtsUDPHardwareConfiguration* interfaceConfiguration_ = 0;
-//
-//
+///	Configurations* configurations = 0;
+///	theInterface_->get(configurations);
+///	FEConfiguration* frontEndConfiguration = 0;
+///	theInterface_->get(frontEndConfiguration, theConfigurationKey_, configurations);
+///	FEWOtsUDPHardwareConfiguration* interfaceConfiguration_ = 0;
+///
+///
 if(configurations->findKOC(theConfigurationKey_->key(),"FEWOtsUDPHardwareConfiguration"))
-//		theInterface_->get(interfaceConfiguration_, theConfigurationKey_, configurations);
+///		theInterface_->get(interfaceConfiguration_, theConfigurationKey_, configurations);
 ////	FEVInterface* theFEWInterface = new FEWOtsUDPFSSRInterface(fecInterfaceNumber_,
 "OTS_UDP", interfaceConfiguration_);
 ////	FEVInterface* theFEWInterface = new FEWZEDRyanInterface(fecInterfaceNumber_,
 "OTS_UDP", interfaceConfiguration_);
-//	FEVInterface* theFEWInterface = new FEWOtsGenericInterface(fecInterfaceNumber_,
+///	FEVInterface* theFEWInterface = new FEWOtsGenericInterface(fecInterfaceNumber_,
 "OTS_UDP", "FSSR", interfaceConfiguration_);
 ////	FEVInterface* theFEWInterface = new FEWZEDHCALInterface(fecInterfaceNumber_,
 interfaceConfiguration_);
-//
-//	theFEWInterface->configureFEW();
-//	// theFEWInterface->start();
-//	//theFEWInterface->configureDetector();
+///
+///	theFEWInterface->configureFEW();
+///	// theFEWInterface->start();
+///	//theFEWInterface->configureDetector();
     ////////////////////////////////////////////////////////////////
 
     return 0;

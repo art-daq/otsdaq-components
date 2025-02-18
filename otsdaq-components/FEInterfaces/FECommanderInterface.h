@@ -26,7 +26,7 @@ class FECommanderInterface : public FEVInterface, public TransceiverSocket
 	void universalWrite(char* address, char* writeValue) override { __FE_SS__ << "Universal write not defined (addressPtr=" << (address?'1':'0') << "writePtr=" << (writeValue?'1':'0') << __E__; __FE_SS_THROW__; }
 
 
-	virtual std::string getStatusProgressDetail(void) override;  // overriding VStateMachine::getStatusProgressDetail
+	virtual std::string getStatusProgressDetail(void) override;  ///< overriding VStateMachine::getStatusProgressDetail
 
 private:
 

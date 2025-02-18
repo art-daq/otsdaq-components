@@ -22,11 +22,11 @@ class FrontEndHardwareBase
 	FrontEndHardwareBase(unsigned int version = -1) : version_(version) { ; }
 	virtual ~FrontEndHardwareBase() { ; }
 
-	// These should never be called directly if used correctly, but
-	// not all classes will implement every function (so no pure virtuals). Should be
-	// obvious  that the wrong thing is happening if these are called because exceptions
-	// are thrown!
-
+	/// These should never be called directly if used correctly, but
+	/// not all classes will implement every function (so no pure virtuals). Should be
+	/// obvious  that the wrong thing is happening if these are called because exceptions
+	/// are thrown!
+	///
 	virtual void write(const std::string& /*sendBuffer*/)
 	{
 		__SS__;
@@ -64,7 +64,7 @@ class FrontEndHardwareBase
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
 	}
 
-	// return count of 'things' flushed
+	/// return count of 'things' flushed
 	virtual int flushRead()
 	{
 		__SS__;

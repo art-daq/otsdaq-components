@@ -10,13 +10,13 @@ namespace ots
 class OtsUDPFirmwareDataGen : public OtsUDPFirmwareCore
 {
 	//===============================================
-	// OtsUDPFirmwareDataGen
-	//
-	//	The intent of this class is to be the "Data Gen" project firmware user
-	// functionality. 	This should handle everything in the user block 0x0 of the address
-	// space.
-	//
-
+	/// OtsUDPFirmwareDataGen
+	///
+	///	The intent of this class is to be the "Data Gen" project firmware user
+	/// functionality. 	This should handle everything in the user block 0x0 of the address
+	/// space.
+	///
+	///
   public:
 	OtsUDPFirmwareDataGen(unsigned int version);
 	virtual ~OtsUDPFirmwareDataGen(void);
