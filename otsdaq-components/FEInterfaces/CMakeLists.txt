@@ -12,4 +12,3 @@ cet_build_plugin(FECommanderInterface otsdaq::FEInterface LIBRARIES REG  otsdaq-
 
 install_headers()
 install_source()
-

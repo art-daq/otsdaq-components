@@ -42,10 +42,10 @@ class OtsUDPHardware : public TransceiverSocket, public FrontEndHardwareBase
 	          std::vector<std::vector<uint64_t> >& receiveQuadWordsVector,
 	          int                                  timeoutSeconds = -1);
 	int  clearReadSocket();
-	//
-	//    virtual int write(uint64_t address, const std::string& value){return 0;}
-	//    virtual int read (uint64_t address, std::string& value){return 0;}
-
+	///
+	///    virtual int write(uint64_t address, const std::string& value){return 0;}
+	///    virtual int read (uint64_t address, std::string& value){return 0;}
+	///
   protected:
 	OtsUDPHardware(std::string  boardIPAddress,
 	               unsigned int boardPort,

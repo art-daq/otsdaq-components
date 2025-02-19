@@ -218,8 +218,8 @@ void FEOtsUDPProducerTemplateInterface::configure(void)
 }
 
 //==============================================================================
-// void FEOtsUDPProducerTemplateInterface::configureDetector(const DACStream&
-// theDACStream)
+/// void FEOtsUDPProducerTemplateInterface::configureDetector(const DACStream&
+/// theDACStream)
 //{
 //	__FE_COUT__ << "\tconfigureDetector" << __E__;
 //}
@@ -424,8 +424,8 @@ bool FEOtsUDPProducerTemplateInterface::running(void)
 }
 
 //==============================================================================
-// NOTE: buffer for address must be at least size universalAddressSize_
-// NOTE: buffer for returnValue must be max UDP size to handle return possibility
+/// NOTE: buffer for address must be at least size universalAddressSize_
+/// NOTE: buffer for returnValue must be max UDP size to handle return possibility
 void ots::FEOtsUDPProducerTemplateInterface::universalRead(char* address,
                                                            char* returnValue)
 {
@@ -446,8 +446,8 @@ void ots::FEOtsUDPProducerTemplateInterface::universalRead(char* address,
 }  // end universalRead()
 
 //==============================================================================
-// NOTE: buffer for address must be at least size universalAddressSize_
-// NOTE: buffer for writeValue must be at least size universalDataSize_
+/// NOTE: buffer for address must be at least size universalAddressSize_
+/// NOTE: buffer for writeValue must be at least size universalDataSize_
 void ots::FEOtsUDPProducerTemplateInterface::universalWrite(char* address,
                                                             char* writeValue)
 {
@@ -464,9 +464,9 @@ void ots::FEOtsUDPProducerTemplateInterface::universalWrite(char* address,
 }  // end universalWrite()
 
 //==============================================================================
-// varTest
-//	FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using MacroMaker.
-//	Macro Notes: This is a great test!
+/// varTest
+///	FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using MacroMaker.
+///	Macro Notes: This is a great test!
 void FEOtsUDPProducerTemplateInterface::varTest(__ARGS__)
 {
 	__FE_COUT__ << "# of input args = " << argsIn.size() << __E__;
@@ -531,9 +531,9 @@ void FEOtsUDPProducerTemplateInterface::varTest(__ARGS__)
 }  // end varTest()
 
 //==============================================================================
-// varTest2
-//	FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using MacroMaker.
-//	Macro Notes: [Modified 14:28 10/11/2018] This is a great test!
+/// varTest2
+///	FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using MacroMaker.
+///	Macro Notes: [Modified 14:28 10/11/2018] This is a great test!
 void FEOtsUDPProducerTemplateInterface::varTest2(__ARGS__)
 {
 	__FE_COUT__ << "# of input args = " << argsIn.size() << __E__;

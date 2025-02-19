@@ -1,6 +1,6 @@
 cet_make_library(LIBRARY_NAME DAQHardware
 SOURCE DAQHardwareBase.cc OtsUDPFirmwareCore.cc OtsUDPFirmwareDataGen.cc OtsUDPHardware.cc
-		 LIBRARIES 
+		 LIBRARIES
 		 PUBLIC
 		 otsdaq::MessageFacility
 		 otsdaq::NetworkUtilities

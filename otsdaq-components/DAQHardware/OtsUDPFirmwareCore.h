@@ -12,25 +12,25 @@ namespace ots
 class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 {
 	//===============================================
-	// OtsUDPFirmwareCore
-	//
-	//	The intent of this class is to be the core UDP firmware functionality.
-	//	This should handle everything except the user block 0x0 of the address space.
-	//
-	//
-	//		Note: Currently there are these other blocks of the address space:
-	//			block 0x1 -- UDP core
-	//			block 0x2 -- Programming over Ethernet core
-
+	/// OtsUDPFirmwareCore
+	///
+	///	The intent of this class is to be the core UDP firmware functionality.
+	///	This should handle everything except the user block 0x0 of the address space.
+	///
+	///
+	///		Note: Currently there are these other blocks of the address space:
+	///			block 0x1 -- UDP core
+	///			block 0x2 -- Programming over Ethernet core
+	///
   public:
 	OtsUDPFirmwareCore(unsigned int version);
 	virtual ~OtsUDPFirmwareCore(void);
 	virtual void init(void);
 
 	/////////////////////////////////////
-	// implementation of base class virtual functionality
-
-	// std::string read	  (char* address);
+	/// implementation of base class virtual functionality
+	///
+	/// std::string read	  (char* address);
 	virtual std::string write(char* address, char* data);
 	virtual void        write(std::string& buffer,
 	                          char*        address,
@@ -65,20 +65,21 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	virtual uint32_t createRegisterFromValue(std::string& readBuffer,
 	                                         std::string& receivedValue);
 	/////////////////////////////////////
-	// low level functionality
+	/// low level functionality
 	void writeAdvanced(std::string& buffer,
 	                   const char*  address,
 	                   const char*  data,
 	                   uint8_t      size               = 1,
 	                   uint8_t      commandTypeOptions = 0,
 	                   bool         clearBuffer        = true);
-	void writeAdvanced(std::string&    buffer,
-	                   const uint64_t& address,
-	                   const char*     data,
-	                   uint8_t         size,
-	                   uint8_t         commandTypeOptions = 0,
-	                   bool clearBuffer = true);  // size is required, to remove ambiguity
-	                                              // when calling write with data=0
+	void writeAdvanced(
+	    std::string&    buffer,
+	    const uint64_t& address,
+	    const char*     data,
+	    uint8_t         size,
+	    uint8_t         commandTypeOptions = 0,
+	    bool            clearBuffer = true);  ///< size is required, to remove ambiguity
+	                               ///< when calling write with data=0
 	void writeAdvanced(std::string&    buffer,
 	                   const uint64_t& address,
 	                   const uint64_t& data,
@@ -101,9 +102,9 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	                  bool            clearBuffer        = true);
 
 	/////////////////////////////////////
-	// next level functionality
-
-	// data destination read/write
+	/// next level functionality
+	///
+	/// data destination read/write
 	void writeDataDestinationIP(std::string&   buffer,
 	                            const uint64_t value,
 	                            bool           clearBuffer = true);
@@ -124,7 +125,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 		buffer += (char)2; /* special one-byte packet, sets data destination as sender */
 	}
 
-	// control destination read/write
+	/// control destination read/write
 	virtual void setControlDestination(std::string&       buffer,
 	                                   const std::string& ip,
 	                                   const uint16_t     port);
@@ -144,7 +145,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 		    (char)1; /* special one-byte packet, sets control destination as sender */
 	}
 
-	// other
+	/// other
 	void UDPFirmwareSpecialPing(std::string& buffer)
 	{
 		buffer.resize(0);
@@ -165,7 +166,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	void startBurst(std::string& buffer);
 	void stopBurst(std::string& buffer);
 
-	// command type options that can be OR'd
+	/// command type options that can be OR'd
 	static const uint8_t FIFO_ADDRESS_CMD_TYPE;
 };
 }  // namespace ots

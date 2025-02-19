@@ -31,15 +31,16 @@ class FEOtsUDPTemplateInterface : public FEVInterface,
 	virtual void universalWrite(char* address, char* writeValue) override;
 
   private:
-  public:  // FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using
+  public:  ///< FEMacro 'varTest' generated, Oct-11-2018 11:36:28, by 'admin' using
 	       // MacroMaker.
 	void varTest(__ARGS__);
 
-  public:  // FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using
+  public:  ///< FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin' using
 	       // MacroMaker.
 	void varTest2(__ARGS__);
 
-  public:  // FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
+  public
+	  :  ///< FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
 	void test(__ARGS__);
 };
 }  // namespace ots

@@ -7,7 +7,7 @@
 using namespace ots;
 
 //==============================================================================
-// This one is often (e.g. FENIMPlusInterface) called by FEs inheriting OtsUDPHardware
+/// This one is often (e.g. FENIMPlusInterface) called by FEs inheriting OtsUDPHardware
 OtsUDPHardware::OtsUDPHardware(std::string  boardIPAddress,
                                unsigned int boardPort,
                                unsigned int version,
@@ -97,12 +97,17 @@ catch(std::runtime_error& e)
 catch(...)
 {
 	__SS__ << "Unrecognized exception caught!" << std::endl;
-	try	{ throw; } //one more try to printout extra info
-	catch(const std::exception &e)
+	try
+	{
+		throw;
+	}  //one more try to printout extra info
+	catch(const std::exception& e)
 	{
 		ss << "Exception message: " << e.what();
 	}
-	catch(...){}
+	catch(...)
+	{
+	}
 	__SS_THROW__;
 }
 
@@ -218,12 +223,17 @@ catch(std::runtime_error& e)
 catch(...)
 {
 	__SS__ << "Unrecognized exception caught!" << std::endl;
-	try	{ throw; } //one more try to printout extra info
-	catch(const std::exception &e)
+	try
+	{
+		throw;
+	}  //one more try to printout extra info
+	catch(const std::exception& e)
 	{
 		ss << "Exception message: " << e.what();
 	}
-	catch(...){}
+	catch(...)
+	{
+	}
 	__COUT_ERR__ << "\n" << ss.str() << std::endl;
 	__SS_THROW__;
 }
@@ -262,7 +272,7 @@ void OtsUDPHardware::writeAndAcknowledge(const std::vector<std::string>& buffer,
 }
 
 //==============================================================================
-// return -1 on failure
+/// return -1 on failure
 void OtsUDPHardware::read(const std::string& sendBuffer,
                           std::string&       receiveBuffer,
                           int                timeoutSeconds)
@@ -320,12 +330,17 @@ catch(std::runtime_error& e)
 catch(...)
 {
 	__SS__ << "Unrecognized exception caught!" << std::endl;
-	try	{ throw; } //one more try to printout extra info
-	catch(const std::exception &e)
+	try
+	{
+		throw;
+	}  //one more try to printout extra info
+	catch(const std::exception& e)
 	{
 		ss << "Exception message: " << e.what();
 	}
-	catch(...){}
+	catch(...)
+	{
+	}
 	__SS_THROW__;
 }
 
@@ -435,12 +450,12 @@ void OtsUDPHardware::read(const std::vector<std::string>&      sendBuffers,
 }
 
 //==============================================================================
-// clearReadSocket
-//
-//	flushes read socket.
-//
-//	reads from read socket until timeout is reached (remove stale packets)
-// returns count of packets that were cleared
+/// clearReadSocket
+///
+///	flushes read socket.
+///
+///	reads from read socket until timeout is reached (remove stale packets)
+/// returns count of packets that were cleared
 int OtsUDPHardware::clearReadSocket()
 {
 	std::string dummerReceiveBuffer;

@@ -27,13 +27,15 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	void                              subscribeJSON(const std::string& JSONNameString);
 	void                              unsubscribe(const std::string& Name);
 	std::array<std::string, 4>        getCurrentValue(const std::string& Name);
-	std::vector<std::vector<std::string>> getChannelHistory(const std::string& Name, int startTime, int endTime);
+	std::vector<std::vector<std::string>> getChannelHistory(const std::string& Name,
+	                                                        int                startTime,
+	                                                        int                endTime);
 	std::vector<std::vector<std::string>> getLastAlarms(const std::string& Name);
 	std::vector<std::vector<std::string>> getAlarmsLog(const std::string& Name);
 	std::vector<std::vector<std::string>> checkAlarmNotifications(void);
 	std::array<std::string, 9>            getSettings(const std::string& Name);
 };
 
-//}
-
+///}
+///
 #endif
