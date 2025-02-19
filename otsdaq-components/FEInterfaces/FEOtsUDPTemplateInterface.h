@@ -39,7 +39,8 @@ class FEOtsUDPTemplateInterface : public FEVInterface,
 	       // MacroMaker.
 	void varTest2(__ARGS__);
 
-  public:  ///< FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
+  public
+	  :  ///< FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using MacroMaker.
 	void test(__ARGS__);
 };
 }  // namespace ots
