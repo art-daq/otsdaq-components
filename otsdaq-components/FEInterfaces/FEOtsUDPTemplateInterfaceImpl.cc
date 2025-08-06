@@ -408,12 +408,12 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 
 	if(TTEST(0))
 	{
-		std::stringstream oss;		
+		std::stringstream oss;
 		oss << "Universal Read Address: 0x";
 		for(unsigned int i = 0; i < universalAddressSize_; ++i)
-			oss << std::uppercase << std::setfill('0') << std::setw(2)
-    			<< std::hex << (uint16_t)address[universalAddressSize_ - 1 - i];
-			//sprintf(buff,"%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
+			oss << std::uppercase << std::setfill('0') << std::setw(2) << std::hex
+			    << (uint16_t)address[universalAddressSize_ - 1 - i];
+		//sprintf(buff,"%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
 		oss << __E__;
 		__FE_COUT__ << oss.str();
 	}
@@ -428,12 +428,12 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 
 	if(TTEST(0))
 	{
-		std::stringstream oss;		
+		std::stringstream oss;
 		oss << "Universal Read Data: 0x";
 		for(unsigned int i = 0; i < universalDataSize_; ++i)
-			oss << std::uppercase << std::setfill('0') << std::setw(2)
-    			<< std::hex << (uint16_t)returnValue[universalDataSize_ - 1 - i];
-			// printf("%2.2X", (unsigned char)returnValue[universalDataSize_ - 1 - i]);
+			oss << std::uppercase << std::setfill('0') << std::setw(2) << std::hex
+			    << (uint16_t)returnValue[universalDataSize_ - 1 - i];
+		// printf("%2.2X", (unsigned char)returnValue[universalDataSize_ - 1 - i]);
 		oss << __E__;
 		__FE_COUT__ << oss.str();
 	}
@@ -449,24 +449,24 @@ void ots::FEOtsUDPTemplateInterface::universalWrite(char* address, char* writeVa
 	{
 		__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
 		__FE_COUT__ << "data size " << universalDataSize_ << __E__;
-		
+
 		{
-			std::stringstream oss;	
+			std::stringstream oss;
 			oss << "Universal Write Address: 0x";
 			for(unsigned int i = 0; i < universalAddressSize_; ++i)
-				oss << std::uppercase << std::setfill('0') << std::setw(2)
-    				<< std::hex << (uint16_t)address[universalAddressSize_ - 1 - i];
+				oss << std::uppercase << std::setfill('0') << std::setw(2) << std::hex
+				    << (uint16_t)address[universalAddressSize_ - 1 - i];
 			// printf("%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
 			oss << __E__;
 			__FE_COUT__ << oss.str();
 		}
 		{
-			std::stringstream oss;	
+			std::stringstream oss;
 			oss << "Universal Write Data: 0x";
 			for(unsigned int i = 0; i < universalDataSize_; ++i)
-				oss << std::uppercase << std::setfill('0') << std::setw(2)
-    				<< std::hex << (uint16_t)writeValue[universalDataSize_ - 1 - i];
-				// printf("%2.2X", (unsigned char)writeValue[universalDataSize_ - 1 - i]);
+				oss << std::uppercase << std::setfill('0') << std::setw(2) << std::hex
+				    << (uint16_t)writeValue[universalDataSize_ - 1 - i];
+			// printf("%2.2X", (unsigned char)writeValue[universalDataSize_ - 1 - i]);
 			oss << __E__;
 			__FE_COUT__ << oss.str();
 		}
@@ -540,7 +540,7 @@ void FEOtsUDPTemplateInterface::varTest(__ARGS__)
 	}
 
 	__SET_ARG_OUT__(PLOTLY_PLOT,  //use built-in auto plotting using plotly
-		R"({
+	                R"({
 			"data" : [{
 					"x": [1, 2, 3],
 					"y": [4, 5, 6],
