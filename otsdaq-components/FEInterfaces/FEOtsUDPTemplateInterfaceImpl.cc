@@ -406,10 +406,17 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 {
 	__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
 
-	__FE_COUT__ << "Universal Read Address: 0x";
-	for(unsigned int i = 0; i < universalAddressSize_; ++i)
-		printf("%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
-	std::cout << __E__;
+	if(TTEST(0))
+	{
+		std::stringstream oss;		
+		oss << "Universal Read Address: 0x";
+		for(unsigned int i = 0; i < universalAddressSize_; ++i)
+			oss << std::uppercase << std::setfill('0') << std::setw(2)
+    			<< std::hex << (uint16_t)address[universalAddressSize_ - 1 - i];
+			//sprintf(buff,"%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
+		oss << __E__;
+		__FE_COUT__ << oss.str();
+	}
 
 	std::string readBuffer, sendBuffer;
 	OtsUDPFirmwareCore::readAdvanced(sendBuffer, address, 1 /*size*/);
@@ -419,10 +426,17 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 	__FE_COUT__ << "Result SIZE: " << readBuffer.size() << __E__;
 	std::memcpy(returnValue, readBuffer.substr(2).c_str(), universalDataSize_);
 
-	__FE_COUT__ << "Universal Read Data: 0x";
-	for(unsigned int i = 0; i < universalDataSize_; ++i)
-		printf("%2.2X", (unsigned char)returnValue[universalDataSize_ - 1 - i]);
-	std::cout << __E__;
+	if(TTEST(0))
+	{
+		std::stringstream oss;		
+		oss << "Universal Read Data: 0x";
+		for(unsigned int i = 0; i < universalDataSize_; ++i)
+			oss << std::uppercase << std::setfill('0') << std::setw(2)
+    			<< std::hex << (uint16_t)returnValue[universalDataSize_ - 1 - i];
+			// printf("%2.2X", (unsigned char)returnValue[universalDataSize_ - 1 - i]);
+		oss << __E__;
+		__FE_COUT__ << oss.str();
+	}
 
 }  // end universalRead()
 
@@ -431,16 +445,32 @@ void ots::FEOtsUDPTemplateInterface::universalRead(char* address, char* returnVa
 /// NOTE: buffer for writeValue must be at least size universalDataSize_
 void ots::FEOtsUDPTemplateInterface::universalWrite(char* address, char* writeValue)
 {
-	__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
-	__FE_COUT__ << "data size " << universalDataSize_ << __E__;
-	__FE_COUT__ << "Universal Write Address: 0x";
-	for(unsigned int i = 0; i < universalAddressSize_; ++i)
-		printf("%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
-	std::cout << __E__;
-	__FE_COUT__ << "Universal Write Data: 0x";
-	for(unsigned int i = 0; i < universalDataSize_; ++i)
-		printf("%2.2X", (unsigned char)writeValue[universalDataSize_ - 1 - i]);
-	std::cout << __E__;
+	if(TTEST(0))
+	{
+		__FE_COUT__ << "address size " << universalAddressSize_ << __E__;
+		__FE_COUT__ << "data size " << universalDataSize_ << __E__;
+		
+		{
+			std::stringstream oss;	
+			oss << "Universal Write Address: 0x";
+			for(unsigned int i = 0; i < universalAddressSize_; ++i)
+				oss << std::uppercase << std::setfill('0') << std::setw(2)
+    				<< std::hex << (uint16_t)address[universalAddressSize_ - 1 - i];
+			// printf("%2.2X", (unsigned char)address[universalAddressSize_ - 1 - i]);
+			oss << __E__;
+			__FE_COUT__ << oss.str();
+		}
+		{
+			std::stringstream oss;	
+			oss << "Universal Write Data: 0x";
+			for(unsigned int i = 0; i < universalDataSize_; ++i)
+				oss << std::uppercase << std::setfill('0') << std::setw(2)
+    				<< std::hex << (uint16_t)writeValue[universalDataSize_ - 1 - i];
+				// printf("%2.2X", (unsigned char)writeValue[universalDataSize_ - 1 - i]);
+			oss << __E__;
+			__FE_COUT__ << oss.str();
+		}
+	}
 
 	std::string sendBuffer;
 	OtsUDPFirmwareCore::writeAdvanced(sendBuffer, address, writeValue, 1 /*size*/);
@@ -508,6 +538,29 @@ void FEOtsUDPTemplateInterface::varTest(__ARGS__)
 		delete[] address;  // free the memory
 		delete[] data;     // free the memory
 	}
+
+	__SET_ARG_OUT__(PLOTLY_PLOT,  //use built-in auto plotting using plotly
+		R"({
+			"data" : [{
+					"x": [1, 2, 3],
+					"y": [4, 5, 6],
+					"mode": "lines+markers",
+					"type": "scatter",
+					"name": "Line 1"
+				},
+				{
+					"x": [1, 2, 3],
+					"y": [8, 3, 4],
+					"mode": "lines+markers",
+					"type": "scatter",
+					"name": "Line 2"
+				}],
+			"layout" : {
+					"title" : { "text" : "Awesome plot"},
+					"xaxis" : { "title" : {"text" : "time"}, "titlefont": { "size" : 10 }, "showticklabels" : true },
+					"yaxis" : { "title" : {"text" : "amplitude"}, "titlefont": { "size" : 10 }, "zeroline" : true }
+				}
+		})");
 
 	for(auto& argOut : argsOut)
 		__FE_COUT__ << argOut.first << ": " << argOut.second << __E__;
