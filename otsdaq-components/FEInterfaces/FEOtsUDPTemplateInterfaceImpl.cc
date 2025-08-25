@@ -94,91 +94,96 @@ FEOtsUDPTemplateInterface::FEOtsUDPTemplateInterface(
 		{
 			{
 				ConfigurationTree bmpNode = getSelfNode().getNode("FloatBitmap");
-				const TableViewColumnInfo::BitMapInfo& bitMapInfo = bmpNode.getColumnInfo().getBitMapInfo();
-				__FE_COUT__ << "Float BitMapInfo: rows=" << bitMapInfo.numOfRows_ 
-							<< ", cols=" << bitMapInfo.numOfColumns_ 
-							<< ", bitSize=" << bitMapInfo.cellBitSize_ 
-							<< ", min=" << bitMapInfo.minValue_ 
-							<< ", max=" << bitMapInfo.maxValue_ 
-							<< ", step=" << bitMapInfo.stepValue_ << __E__;
-				__FE_COUT__ << "  colors: min=" << bitMapInfo.minColor_ 
-							<< ", mid=" << bitMapInfo.midColor_ 
-							<< ", max=" << bitMapInfo.maxColor_ << __E__;
-				__FE_COUT__ << "  flags: rowsAsc=" << bitMapInfo.rowsAscending_ 
-							<< ", colsAsc=" << bitMapInfo.colsAscending_ 
-							<< ", snakeRows=" << bitMapInfo.snakeRows_ 
-							<< ", snakeCols=" << bitMapInfo.snakeCols_ 
-							<< ", float=" << bitMapInfo.floatingPoint_ << __E__;
-				
+				const TableViewColumnInfo::BitMapInfo& bitMapInfo =
+				    bmpNode.getColumnInfo().getBitMapInfo();
+				__FE_COUT__ << "Float BitMapInfo: rows=" << bitMapInfo.numOfRows_
+				            << ", cols=" << bitMapInfo.numOfColumns_
+				            << ", bitSize=" << bitMapInfo.cellBitSize_
+				            << ", min=" << bitMapInfo.minValue_
+				            << ", max=" << bitMapInfo.maxValue_
+				            << ", step=" << bitMapInfo.stepValue_ << __E__;
+				__FE_COUT__ << "  colors: min=" << bitMapInfo.minColor_
+				            << ", mid=" << bitMapInfo.midColor_
+				            << ", max=" << bitMapInfo.maxColor_ << __E__;
+				__FE_COUT__ << "  flags: rowsAsc=" << bitMapInfo.rowsAscending_
+				            << ", colsAsc=" << bitMapInfo.colsAscending_
+				            << ", snakeRows=" << bitMapInfo.snakeRows_
+				            << ", snakeCols=" << bitMapInfo.snakeCols_
+				            << ", float=" << bitMapInfo.floatingPoint_ << __E__;
+
 				{
-					ConfigurationTree::BitMap<double> bmp = bmpNode.getValueAsBitMap<double>();
+					ConfigurationTree::BitMap<double> bmp =
+					    bmpNode.getValueAsBitMap<double>();
 
 					__FE_COUTV__(bmp.numberOfRows());
 					__FE_COUTV__(bmp.numberOfColumns(0));
-					__FE_COUTV__(bmp.get(0,0));
-					__FE_COUTV__(bmp.get(0,1));
-					__FE_COUTV__(bmp.get(0,2));
-					__FE_COUTV__(bmp.get(0,3));
-					__FE_COUTV__(bmp.get(0,4));
+					__FE_COUTV__(bmp.get(0, 0));
+					__FE_COUTV__(bmp.get(0, 1));
+					__FE_COUTV__(bmp.get(0, 2));
+					__FE_COUTV__(bmp.get(0, 3));
+					__FE_COUTV__(bmp.get(0, 4));
 					if(TTEST(1))
 						bmp.print();
 				}
 
 				{
-					ConfigurationTree::BitMap<uint8_t> bmp = bmpNode.getValueAsBitMap<uint8_t>();
+					ConfigurationTree::BitMap<uint8_t> bmp =
+					    bmpNode.getValueAsBitMap<uint8_t>();
 
 					__FE_COUTV__(bmp.numberOfRows());
 					__FE_COUTV__(bmp.numberOfColumns(0));
-					__FE_COUTV__((uint16_t)bmp.get(0,0));
-					__FE_COUTV__((uint16_t)bmp.get(0,1));
-					__FE_COUTV__((uint16_t)bmp.get(0,2));
-					__FE_COUTV__((uint16_t)bmp.get(0,3));
-					__FE_COUTV__((uint16_t)bmp.get(0,4));
+					__FE_COUTV__((uint16_t)bmp.get(0, 0));
+					__FE_COUTV__((uint16_t)bmp.get(0, 1));
+					__FE_COUTV__((uint16_t)bmp.get(0, 2));
+					__FE_COUTV__((uint16_t)bmp.get(0, 3));
+					__FE_COUTV__((uint16_t)bmp.get(0, 4));
 					if(TTEST(1))
 						bmp.print();
 				}
 			}
 
-			
 			{
 				ConfigurationTree bmpNode = getSelfNode().getNode("StringBitmap");
-				TableViewColumnInfo::BitMapInfo bitMapInfo = getSelfNode().getNode("StringBitmap").getColumnInfo().getBitMapInfo();
-				__FE_COUT__ << "String BitMapInfo: rows=" << bitMapInfo.numOfRows_ 
-							<< ", cols=" << bitMapInfo.numOfColumns_ 
-							<< ", bitSize=" << bitMapInfo.cellBitSize_ 
-							<< ", min=" << bitMapInfo.minValue_ 
-							<< ", max=" << bitMapInfo.maxValue_ 
-							<< ", step=" << bitMapInfo.stepValue_ << __E__;
-				__FE_COUT__ << "  colors: min=" << bitMapInfo.minColor_ 
-							<< ", mid=" << bitMapInfo.midColor_ 
-							<< ", max=" << bitMapInfo.maxColor_ << __E__;
-				__FE_COUT__ << "  flags: rowsAsc=" << bitMapInfo.rowsAscending_ 
-							<< ", colsAsc=" << bitMapInfo.colsAscending_ 
-							<< ", snakeRows=" << bitMapInfo.snakeRows_ 
-							<< ", snakeCols=" << bitMapInfo.snakeCols_ 
-							<< ", float=" << bitMapInfo.floatingPoint_ << __E__;	
+				TableViewColumnInfo::BitMapInfo bitMapInfo =
+				    getSelfNode().getNode("StringBitmap").getColumnInfo().getBitMapInfo();
+				__FE_COUT__ << "String BitMapInfo: rows=" << bitMapInfo.numOfRows_
+				            << ", cols=" << bitMapInfo.numOfColumns_
+				            << ", bitSize=" << bitMapInfo.cellBitSize_
+				            << ", min=" << bitMapInfo.minValue_
+				            << ", max=" << bitMapInfo.maxValue_
+				            << ", step=" << bitMapInfo.stepValue_ << __E__;
+				__FE_COUT__ << "  colors: min=" << bitMapInfo.minColor_
+				            << ", mid=" << bitMapInfo.midColor_
+				            << ", max=" << bitMapInfo.maxColor_ << __E__;
+				__FE_COUT__ << "  flags: rowsAsc=" << bitMapInfo.rowsAscending_
+				            << ", colsAsc=" << bitMapInfo.colsAscending_
+				            << ", snakeRows=" << bitMapInfo.snakeRows_
+				            << ", snakeCols=" << bitMapInfo.snakeCols_
+				            << ", float=" << bitMapInfo.floatingPoint_ << __E__;
 				{
-					ConfigurationTree::BitMap<uint16_t> bmp = bmpNode.getValueAsBitMap<uint16_t>();
+					ConfigurationTree::BitMap<uint16_t> bmp =
+					    bmpNode.getValueAsBitMap<uint16_t>();
 					__FE_COUTV__(bmp.numberOfRows());
 					__FE_COUTV__(bmp.numberOfColumns(0));
-					__FE_COUTV__(bmp.get(0,0));
-					__FE_COUTV__(bmp.get(0,1));
-					__FE_COUTV__(bmp.get(0,2));
-					__FE_COUTV__(bmp.get(0,3));
-					__FE_COUTV__(bmp.get(0,4));
+					__FE_COUTV__(bmp.get(0, 0));
+					__FE_COUTV__(bmp.get(0, 1));
+					__FE_COUTV__(bmp.get(0, 2));
+					__FE_COUTV__(bmp.get(0, 3));
+					__FE_COUTV__(bmp.get(0, 4));
 					if(TTEST(1))
 						bmp.print();
 				}
 
 				{
-					ConfigurationTree::BitMap<std::string> bmp = bmpNode.getValueAsBitMap<std::string>();
+					ConfigurationTree::BitMap<std::string> bmp =
+					    bmpNode.getValueAsBitMap<std::string>();
 					__FE_COUTV__(bmp.numberOfRows());
 					__FE_COUTV__(bmp.numberOfColumns(0));
-					__FE_COUTV__(bmp.get(0,0));
-					__FE_COUTV__(bmp.get(0,1));
-					__FE_COUTV__(bmp.get(0,2));
-					__FE_COUTV__(bmp.get(0,3));
-					__FE_COUTV__(bmp.get(0,4));
+					__FE_COUTV__(bmp.get(0, 0));
+					__FE_COUTV__(bmp.get(0, 1));
+					__FE_COUTV__(bmp.get(0, 2));
+					__FE_COUTV__(bmp.get(0, 3));
+					__FE_COUTV__(bmp.get(0, 4));
 					if(TTEST(1))
 						bmp.print();
 				}
@@ -187,16 +192,15 @@ FEOtsUDPTemplateInterface::FEOtsUDPTemplateInterface(
 					auto bmp = bmpNode.getValueAsBitMap<uint32_t>();
 					__FE_COUTV__(bmp.numberOfRows());
 					__FE_COUTV__(bmp.numberOfColumns(0));
-					__FE_COUTV__(bmp.get(0,0));
-					__FE_COUTV__(bmp.get(0,1));
-					__FE_COUTV__(bmp.get(0,2));
-					__FE_COUTV__(bmp.get(0,3));
-					__FE_COUTV__(bmp.get(0,4));
+					__FE_COUTV__(bmp.get(0, 0));
+					__FE_COUTV__(bmp.get(0, 1));
+					__FE_COUTV__(bmp.get(0, 2));
+					__FE_COUTV__(bmp.get(0, 3));
+					__FE_COUTV__(bmp.get(0, 4));
 					if(TTEST(1))
 						bmp.print();
 				}
 			}
-
 		}
 		catch(...)
 		{
@@ -218,8 +222,7 @@ FEOtsUDPTemplateInterface::FEOtsUDPTemplateInterface(
 				__FE_COUT__ << "Unknown error." << __E__;
 			}
 		}
-	} //end example of using int, float, and string bitmaps
-	
+	}  //end example of using int, float, and string bitmaps
 
 }  // end constructor
 
