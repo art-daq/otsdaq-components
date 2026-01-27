@@ -15,6 +15,10 @@ find_package(cetmodules 3.16.00 REQUIRED)
 project(otsdaq-components VERSION 3.02.00)
 
 include(CetCMakeEnv)
+include(SetCompilerFlags)
+include(InstallHeaders)
+include(InstallSource)
+include(InstallFhicl)
 cet_cmake_env()
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
@@ -30,13 +34,13 @@ else()
 endif()
 
 cet_set_compiler_flags(
- DIAGS 
+ DIAGS
  VIGILANT
  WERROR
  NO_UNDEFINED
  EXTRA_FLAGS -pedantic -D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES=1 ${DT_FLAG}
  )
- 
+
 # Debug streamer.
 string(TOUPPER ${CMAKE_BUILD_TYPE} BTYPE_UC)
 if(BTYPE_UC STREQUAL DEBUG)
@@ -69,12 +73,12 @@ if(BTYPE_UC STREQUAL DEBUG)
 endif()
 
 find_package(otsdaq 2.06.06 REQUIRED EXPORT)
- 
+
  # XDAQ Extra setup
  include_directories($ENV{XDAQ_ROOT}/include/linux $ENV{XDAQ_ROOT}/include)
 link_directories($ENV{XDAQ_ROOT}/lib)
 link_directories($ENV{ARTDAQ_DATABASE_LIB})
- set(XDAQ_BASIC_LIB_LIST 
+ set(XDAQ_BASIC_LIB_LIST
    xcept
    xoap
    xdaq
