@@ -8,3 +8,4 @@ obj
 *.tmp
 spack-build-*
 build-linux-*
+_codeql_*
