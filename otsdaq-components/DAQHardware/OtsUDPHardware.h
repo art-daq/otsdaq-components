@@ -4,6 +4,9 @@
 #include "otsdaq-components/DAQHardware/FrontEndHardwareBase.h"
 #include "otsdaq/NetworkUtilities/TransceiverSocket.h"
 
+#include <string>
+#include <vector>
+
 namespace ots
 {
 class OtsUDPHardware : public TransceiverSocket, public FrontEndHardwareBase

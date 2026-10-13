@@ -4,6 +4,8 @@
 #include "otsdaq/FECore/FEVInterface.h"
 #include "otsdaq/NetworkUtilities/TransceiverSocket.h"
 
+#include <string>
+
 namespace ots
 {
 class FECommanderInterface : public FEVInterface, public TransceiverSocket
