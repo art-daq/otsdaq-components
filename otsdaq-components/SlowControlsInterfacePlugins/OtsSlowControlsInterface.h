@@ -1,5 +1,5 @@
-#ifndef _ots_OtsSlowControlsInterface_h
-#define _ots_OtsSlowControlsInterface_h
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_
 
 #include <array>
 #include <string>
@@ -21,7 +21,7 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	void initialize();
 	void destroy();
 
-	std::vector<std::string /*Name*/> getChannelList();
+	std::vector<std::string /***Name  */> getChannelList();
 	std::string                       getList(const std::string& format);
 	void                              subscribe(const std::string& Name);
 	void                              subscribeJSON(const std::string& JSONNameString);
@@ -38,4 +38,4 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 
 ///}
 ///
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_

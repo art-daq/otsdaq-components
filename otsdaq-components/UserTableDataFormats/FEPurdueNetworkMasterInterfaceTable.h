@@ -1,5 +1,5 @@
-#ifndef _ots_FEPurdueNetworkMasterInterfaceTable_h_
-#define _ots_FEPurdueNetworkMasterInterfaceTable_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEPURDUENETWORKMASTERINTERFACETABLE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEPURDUENETWORKMASTERINTERFACETABLE_H_
 
 #include <string>
 #include "otsdaq/TableDataFormats/FEInterfaceTableBase.h"
@@ -36,4 +36,4 @@ class FEPurdueNetworkMasterInterfaceTable : public FEInterfaceTableBase
 	};
 };
 }  // namespace ots
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEPURDUENETWORKMASTERINTERFACETABLE_H_

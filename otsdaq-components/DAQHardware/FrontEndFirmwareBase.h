@@ -1,5 +1,5 @@
-#ifndef _ots_FrontEndFirmwareBase_h_
-#define _ots_FrontEndFirmwareBase_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_FRONTENDFIRMWAREBASE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_FRONTENDFIRMWAREBASE_H_
 
 #include <iostream>
 #include <string>
@@ -34,7 +34,7 @@ class FrontEndFirmwareBase
 	};
 	virtual void read(std::string& /*buffer*/,
 	                  char* /*address*/,
-	                  bool /*clearBuffer*/ = true)
+	                  bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -42,7 +42,7 @@ class FrontEndFirmwareBase
 	};
 	virtual void read(std::string& /*buffer*/,
 	                  uint64_t /*address*/,
-	                  bool /*clearBuffer*/ = true)
+	                  bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -50,7 +50,7 @@ class FrontEndFirmwareBase
 	};
 	virtual void read(std::string& /*buffer*/,
 	                  uint32_t /*address*/,
-	                  bool /*clearBuffer*/ = true)
+	                  bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -66,7 +66,7 @@ class FrontEndFirmwareBase
 	virtual void write(std::string& /*buffer*/,
 	                   char* /*address*/,
 	                   char* /*data*/,
-	                   bool /*clearBuffer*/ = true)
+	                   bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -76,7 +76,7 @@ class FrontEndFirmwareBase
 	virtual void setDataDestination(std::string& /*buffer*/,
 	                                const std::string& /*ip*/,
 	                                const uint16_t /*port*/,
-	                                bool /*clearBuffer*/ = true)
+	                                bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -85,7 +85,7 @@ class FrontEndFirmwareBase
 	virtual void write(std::string& /*buffer*/,
 	                   uint64_t /*address*/,
 	                   uint64_t /*data*/,
-	                   bool /*clearBuffer*/ = true)
+	                   bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -94,7 +94,7 @@ class FrontEndFirmwareBase
 	virtual void write(std::string& /*buffer*/,
 	                   uint32_t /*address*/,
 	                   uint32_t /*data*/,
-	                   bool /*clearBuffer*/ = true)
+	                   bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -103,8 +103,8 @@ class FrontEndFirmwareBase
 	virtual void waitSet(std::string& /*buffer*/,
 	                     uint32_t /*address*/,
 	                     uint32_t /*data*/,
-	                     uint32_t /*timeout*/ = 255,
-	                     bool /*clearBuffer*/ = true)
+	                     uint32_t /***timeout  */ = 255,
+	                     bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -113,8 +113,8 @@ class FrontEndFirmwareBase
 	virtual void waitClear(std::string& /*buffer*/,
 	                       uint32_t /*address*/,
 	                       uint32_t /*data*/,
-	                       uint32_t /*timeout*/ = 255,
-	                       bool /*clearBuffer*/ = true)
+	                       uint32_t /***timeout  */ = 255,
+	                       bool /***clearBuffer  */ = true)
 	{
 		__SS__;
 		__THROW__(ss.str() + "Illegal call to undefined base class member function");
@@ -190,4 +190,4 @@ class FrontEndFirmwareBase
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_FRONTENDFIRMWAREBASE_H_

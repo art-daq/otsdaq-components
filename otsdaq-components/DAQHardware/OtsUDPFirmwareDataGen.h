@@ -1,5 +1,5 @@
-#ifndef _ots_OtsUDPFirmwareDataGen_h_
-#define _ots_OtsUDPFirmwareDataGen_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWAREDATAGEN_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWAREDATAGEN_H_
 
 #include <string>
 
@@ -28,4 +28,4 @@ class OtsUDPFirmwareDataGen : public OtsUDPFirmwareCore
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWAREDATAGEN_H_

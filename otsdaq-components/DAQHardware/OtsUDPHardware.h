@@ -1,5 +1,5 @@
-#ifndef _ots_OtsUDPHardware_h_
-#define _ots_OtsUDPHardware_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPHARDWARE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPHARDWARE_H_
 
 #include "otsdaq-components/DAQHardware/FrontEndHardwareBase.h"
 #include "otsdaq/NetworkUtilities/TransceiverSocket.h"
@@ -57,4 +57,4 @@ class OtsUDPHardware : public TransceiverSocket, public FrontEndHardwareBase
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPHARDWARE_H_

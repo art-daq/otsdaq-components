@@ -1,5 +1,5 @@
-#ifndef _ots_FECommanderInterface_h_
-#define _ots_FECommanderInterface_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FECOMMANDERINTERFACE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FECOMMANDERINTERFACE_H_
 
 #include "otsdaq/FECore/FEVInterface.h"
 #include "otsdaq/NetworkUtilities/TransceiverSocket.h"
@@ -56,4 +56,4 @@ class FECommanderInterface : public FEVInterface, public TransceiverSocket
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FECOMMANDERINTERFACE_H_

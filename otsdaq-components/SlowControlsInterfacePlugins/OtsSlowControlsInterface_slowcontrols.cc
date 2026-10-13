@@ -48,9 +48,9 @@ std::array<std::string, 4> OtsSlowControlsInterface::getCurrentValue(
 }
 
 std::vector<std::vector<std::string>> OtsSlowControlsInterface::getChannelHistory(
-    const std::string& /*Name*/
+    const std::string& //Name
     ,
-    int /*start time*/
+    int //start time
     ,
     int /* end time*/)
 {

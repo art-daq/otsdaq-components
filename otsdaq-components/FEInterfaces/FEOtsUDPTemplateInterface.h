@@ -1,5 +1,5 @@
-#ifndef _ots_FEOtsUDPTemplateInterface_h_
-#define _ots_FEOtsUDPTemplateInterface_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPTEMPLATEINTERFACE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPTEMPLATEINTERFACE_H_
 
 #include "otsdaq-components/DAQHardware/OtsUDPFirmwareDataGen.h"
 #include "otsdaq-components/DAQHardware/OtsUDPHardware.h"
@@ -45,4 +45,4 @@ class FEOtsUDPTemplateInterface : public FEVInterface,
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPTEMPLATEINTERFACE_H_

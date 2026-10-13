@@ -1,5 +1,5 @@
-#ifndef _ots_FEOtsUDPFSSRInterfaceTable_h_
-#define _ots_FEOtsUDPFSSRInterfaceTable_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPFSSRINTERFACETABLE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPFSSRINTERFACETABLE_H_
 
 #include <string>
 #include "otsdaq/TableDataFormats/FEInterfaceTableBase.h"
@@ -51,4 +51,4 @@ class FEOtsUDPFSSRInterfaceTable : public FEInterfaceTableBase
 	};
 };
 }  // namespace ots
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPFSSRINTERFACETABLE_H_

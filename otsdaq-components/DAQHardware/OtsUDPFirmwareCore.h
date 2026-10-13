@@ -1,5 +1,5 @@
-#ifndef _ots_OtsUDPFirmwareCore_h_
-#define _ots_OtsUDPFirmwareCore_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWARECORE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWARECORE_H_
 
 //#include "otsdaq-fermilabtestbeam/DAQHardware/FirmwareSequence.h"
 #include "otsdaq-components/DAQHardware/FrontEndFirmwareBase.h"
@@ -47,8 +47,8 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	virtual void        waitClear(std::string& /*buffer*/,
 	                              uint32_t /*address*/,
 	                              uint32_t /*data*/,
-	                              uint32_t /*timeout*/ = 255,
-	                              bool /*clearBuffer*/ = true)
+	                              uint32_t /***timeout  */ = 255,
+	                              bool /***clearBuffer  */ = true)
 	{
 	}
 
@@ -122,7 +122,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	void setDataDestinationAsSelf(std::string& buffer)
 	{
 		buffer.resize(0);
-		buffer += (char)2; /* special one-byte packet, sets data destination as sender */
+		buffer += (char)2; // special one-byte packet, sets data destination as sender 
 	}
 
 	/// control destination read/write
@@ -142,14 +142,14 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	{
 		buffer.resize(0);
 		buffer +=
-		    (char)1; /* special one-byte packet, sets control destination as sender */
+		    (char)1; // special one-byte packet, sets control destination as sender 
 	}
 
 	/// other
 	void UDPFirmwareSpecialPing(std::string& buffer)
 	{
 		buffer.resize(0);
-		buffer += (char)0; /* special one-byte packet, returns OEI version (16-bits) */
+		buffer += (char)0; // special one-byte packet, returns OEI version (16-bits) 
 	}
 	void UDPFirmwareSpecialNoOp(std::string& buffer)
 	{
@@ -171,4 +171,4 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_OTSUDPFIRMWARECORE_H_
