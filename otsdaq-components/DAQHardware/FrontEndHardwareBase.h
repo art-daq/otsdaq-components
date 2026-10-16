@@ -10,7 +10,7 @@
 
 #include "otsdaq/Macros/CoutMacros.h"
 
-#include <stdexcept> //for std::runtime_error
+#include <stdexcept>  //for std::runtime_error
 #include <string>
 #include <vector>
 

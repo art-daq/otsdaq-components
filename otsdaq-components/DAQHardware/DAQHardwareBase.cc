@@ -19,4 +19,4 @@ DAQHardwareBase::~DAQHardwareBase()
 	// TODO Auto-generated destructor stub
 }
 
-} // namespace ots 
+}  // namespace ots

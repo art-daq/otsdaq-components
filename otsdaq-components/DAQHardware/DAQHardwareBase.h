@@ -17,6 +17,6 @@ class DAQHardwareBase
 	virtual ~DAQHardwareBase();
 };
 
-} // namespace ots 
+}  // namespace ots
 
 #endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_DAQHARDWAREBASE_H_

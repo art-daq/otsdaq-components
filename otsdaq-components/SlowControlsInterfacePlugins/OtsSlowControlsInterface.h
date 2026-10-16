@@ -23,11 +23,11 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	void destroy();
 
 	std::vector<std::string /***Name  */> getChannelList();
-	std::string                       getList(const std::string& format);
-	void                              subscribe(const std::string& Name);
-	void                              subscribeJSON(const std::string& JSONNameString);
-	void                              unsubscribe(const std::string& Name);
-	std::array<std::string, 4>        getCurrentValue(const std::string& Name);
+	std::string                           getList(const std::string& format);
+	void                                  subscribe(const std::string& Name);
+	void                       subscribeJSON(const std::string& JSONNameString);
+	void                       unsubscribe(const std::string& Name);
+	std::array<std::string, 4> getCurrentValue(const std::string& Name);
 	std::vector<std::vector<std::string>> getChannelHistory(const std::string& Name,
 	                                                        int                startTime,
 	                                                        int                endTime);

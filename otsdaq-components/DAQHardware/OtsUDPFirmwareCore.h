@@ -122,7 +122,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	void setDataDestinationAsSelf(std::string& buffer)
 	{
 		buffer.resize(0);
-		buffer += (char)2; // special one-byte packet, sets data destination as sender 
+		buffer += (char)2;  // special one-byte packet, sets data destination as sender
 	}
 
 	/// control destination read/write
@@ -141,15 +141,14 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	void setControlDestinationAsSelf(std::string& buffer)
 	{
 		buffer.resize(0);
-		buffer +=
-		    (char)1; // special one-byte packet, sets control destination as sender 
+		buffer += (char)1;  // special one-byte packet, sets control destination as sender
 	}
 
 	/// other
 	void UDPFirmwareSpecialPing(std::string& buffer)
 	{
 		buffer.resize(0);
-		buffer += (char)0; // special one-byte packet, returns OEI version (16-bits) 
+		buffer += (char)0;  // special one-byte packet, returns OEI version (16-bits)
 	}
 	void UDPFirmwareSpecialNoOp(std::string& buffer)
 	{
