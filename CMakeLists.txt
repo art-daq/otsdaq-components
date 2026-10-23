@@ -74,7 +74,13 @@ endif()
 
 find_package(otsdaq 2.06.06 REQUIRED EXPORT)
 
- include(BuildPlugins)
+if(DEFINED ENV{OTS_LITE})
+	# art::plugin builder base without art; otsdaq installs it in <prefix>/Modules (see otsdaq/Modules/lite)
+	add_definitions(-DOTS_LITE)
+	include(BasicPlugin)
+else()
+	include(BuildPlugins)
+endif()
 
 # Code
 add_subdirectory(otsdaq-components)

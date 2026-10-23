@@ -1,4 +1,5 @@
 #include "otsdaq-components/DAQHardware/OtsUDPHardware.h"
+#include <algorithm>
 #include <iomanip>
 #include <iostream>
 #include "otsdaq/Macros/CoutMacros.h"
