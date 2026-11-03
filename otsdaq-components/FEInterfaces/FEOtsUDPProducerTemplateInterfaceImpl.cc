@@ -12,24 +12,24 @@ FEOtsUDPProducerTemplateInterface::FEOtsUDPProducerTemplateInterface(
     const ConfigurationTree& theXDAQContextConfigTree,
     const std::string&       interfaceConfigurationPath)
     : Socket(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-                 .getNode("HostIPAddress")
-                 .getValue<std::string>(),
-             theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-                 .getNode("HostPort")
-                 .getValue<unsigned int>())
+	             .getNode("HostIPAddress")
+	             .getValue<std::string>(),
+	         theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+	             .getNode("HostPort")
+	             .getValue<unsigned int>())
     //, WorkLoop (interfaceUID + "-workloop")
     , FEProducerVInterface(
           interfaceUID, theXDAQContextConfigTree, interfaceConfigurationPath)
     //, DataProducer ("supervisorID","bufferID","processorID",100/*bufferSize*/)
     , OtsUDPHardware(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-                         .getNode("InterfaceIPAddress")
-                         .getValue<std::string>(),
-                     theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-                         .getNode("InterfacePort")
-                         .getValue<unsigned int>())
+	                     .getNode("InterfaceIPAddress")
+	                     .getValue<std::string>(),
+	                 theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+	                     .getNode("InterfacePort")
+	                     .getValue<unsigned int>())
     , OtsUDPFirmwareDataGen(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-                                .getNode("FirmwareVersion")
-                                .getValue<unsigned int>())
+	                            .getNode("FirmwareVersion")
+	                            .getValue<unsigned int>())
 {
 	// registration of FEMacro 'varTest2' generated, Oct-11-2018 02:28:57, by 'admin'
 	// using MacroMaker.

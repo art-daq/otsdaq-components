@@ -79,7 +79,7 @@ class OtsUDPFirmwareCore : public FrontEndFirmwareBase
 	    uint8_t         size,
 	    uint8_t         commandTypeOptions = 0,
 	    bool            clearBuffer = true);  ///< size is required, to remove ambiguity
-	                               ///< when calling write with data=0
+	                                          ///< when calling write with data=0
 	void writeAdvanced(std::string&    buffer,
 	                   const uint64_t& address,
 	                   const uint64_t& data,
