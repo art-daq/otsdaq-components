@@ -1,8 +1,9 @@
-#ifndef _ots_OtsSlowControlsInterface_h
-#define _ots_OtsSlowControlsInterface_h
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_
 
 #include <array>
 #include <string>
+#include <vector>
 
 #include "otsdaq/NetworkUtilities/ReceiverSocket.h"  // Make sure this is always first because <sys/types.h> (defined in Socket.h) must be first
 #include "otsdaq/SlowControlsCore/SlowControlsVInterface.h"
@@ -21,12 +22,12 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	void initialize();
 	void destroy();
 
-	std::vector<std::string /*Name*/> getChannelList();
-	std::string                       getList(const std::string& format);
-	void                              subscribe(const std::string& Name);
-	void                              subscribeJSON(const std::string& JSONNameString);
-	void                              unsubscribe(const std::string& Name);
-	std::array<std::string, 4>        getCurrentValue(const std::string& Name);
+	std::vector<std::string /***Name  */> getChannelList();
+	std::string                           getList(const std::string& format);
+	void                                  subscribe(const std::string& Name);
+	void                       subscribeJSON(const std::string& JSONNameString);
+	void                       unsubscribe(const std::string& Name);
+	std::array<std::string, 4> getCurrentValue(const std::string& Name);
 	std::vector<std::vector<std::string>> getChannelHistory(const std::string& Name,
 	                                                        int                startTime,
 	                                                        int                endTime);
@@ -38,4 +39,4 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 
 ///}
 ///
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_SLOWCONTROLSINTERFACEPLUGINS_OTSSLOWCONTROLSINTERFACE_H_

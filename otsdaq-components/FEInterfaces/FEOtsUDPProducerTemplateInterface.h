@@ -1,5 +1,5 @@
-#ifndef _ots_FEOtsUDPProducerTemplateInterface_h_
-#define _ots_FEOtsUDPProducerTemplateInterface_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPPRODUCERTEMPLATEINTERFACE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPPRODUCERTEMPLATEINTERFACE_H_
 
 //#include "otsdaq/FECore/FEVInterface.h"
 #include "otsdaq-components/DAQHardware/OtsUDPFirmwareDataGen.h"
@@ -47,4 +47,4 @@ class FEOtsUDPProducerTemplateInterface
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_FEINTERFACES_FEOTSUDPPRODUCERTEMPLATEINTERFACE_H_

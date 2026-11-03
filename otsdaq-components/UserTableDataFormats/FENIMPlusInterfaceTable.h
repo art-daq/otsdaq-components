@@ -1,5 +1,5 @@
-#ifndef _ots_FENIMPlusInterfaceTable_h_
-#define _ots_FENIMPlusInterfaceTable_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FENIMPLUSINTERFACETABLE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FENIMPLUSINTERFACETABLE_H_
 
 #include <string>
 #include "otsdaq/TableDataFormats/FEInterfaceTableBase.h"
@@ -51,4 +51,4 @@ class FENIMPlusInterfaceTable : public FEInterfaceTableBase
 	};
 };
 }  // namespace ots
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FENIMPLUSINTERFACETABLE_H_

@@ -1,5 +1,5 @@
-#ifndef _ots_FEWROtsUDPTemplateInterfaceTable_h_
-#define _ots_FEWROtsUDPTemplateInterfaceTable_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPTEMPLATEINTERFACETABLE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPTEMPLATEINTERFACETABLE_H_
 
 #include <string>
 #include "otsdaq/TableDataFormats/FEInterfaceTableBase.h"
@@ -45,4 +45,4 @@ class FEWROtsUDPTemplateInterfaceTable : public FEInterfaceTableBase
 	};
 };
 }  // namespace ots
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FEOTSUDPTEMPLATEINTERFACETABLE_H_

@@ -5,8 +5,8 @@
  *      Author: uplegger
  */
 
-#ifndef _ots_DAQHardwareBase_h_
-#define _ots_DAQHardwareBase_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_DAQHARDWAREBASE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_DAQHARDWAREBASE_H_
 
 namespace ots
 {
@@ -17,6 +17,6 @@ class DAQHardwareBase
 	virtual ~DAQHardwareBase();
 };
 
-} /* namespace ots */
+}  // namespace ots
 
-#endif /* _ots_DAQHardwareBase_h_ */
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_DAQHARDWARE_DAQHARDWAREBASE_H_

@@ -1,8 +1,9 @@
-#include <iostream>
 #include "otsdaq/TablePlugins/DataManagerTable.h"
 
 #include "otsdaq-components/UserTableDataFormats/FEOtsUDPFSSRInterfaceTable.h"
 #include "otsdaq/Macros/TablePluginMacros.h"
+
+#include <iostream>
 
 using namespace ots;
 

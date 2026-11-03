@@ -1,5 +1,5 @@
-#ifndef _ots_FSSRDACsConfiguration_h_
-#define _ots_FSSRDACsConfiguration_h_
+#ifndef OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FSSRDACSTABLE_H_
+#define OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FSSRDACSTABLE_H_
 
 #include "otsdaq/TableDataFormats/DACsTableBase.h"
 
@@ -43,4 +43,4 @@ class FSSRDACsConfiguration : public DACsTableBase
 	};
 };
 }  // namespace ots
-#endif
+#endif  // OTSDAQ_COMPONENTS_OTSDAQ_COMPONENTS_USERTABLEDATAFORMATS_FSSRDACSTABLE_H_
