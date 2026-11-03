@@ -71,21 +71,27 @@ void OtsUDPFirmwareCore::write(std::string& buffer,
                                char*        address,
                                char*        data,
                                bool         clearBuffer)
-{ writeAdvanced(buffer, address, data, 1 /*size*/, 0 /*options*/, clearBuffer); }
+{
+	writeAdvanced(buffer, address, data, 1 /*size*/, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 void OtsUDPFirmwareCore::write(std::string& buffer,
                                uint32_t     address,
                                uint32_t     data,
                                bool         clearBuffer)
-{ writeAdvanced(buffer, address, data, 0 /*options*/, clearBuffer); }
+{
+	writeAdvanced(buffer, address, data, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 void OtsUDPFirmwareCore::write(std::string& buffer,
                                uint64_t     address,
                                uint64_t     data,
                                bool         clearBuffer)
-{ writeAdvanced(buffer, address, data, 0 /*options*/, clearBuffer); }
+{
+	writeAdvanced(buffer, address, data, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 /// OtsUDPFirmwareCore::writeAdvanced
@@ -199,15 +205,21 @@ std::string OtsUDPFirmwareCore::read(char* address)
 
 //==============================================================================
 void OtsUDPFirmwareCore::read(std::string& buffer, char* address, bool clearBuffer)
-{ readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer); }
+{
+	readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 void OtsUDPFirmwareCore::read(std::string& buffer, uint64_t address, bool clearBuffer)
-{ readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer); }
+{
+	readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 void OtsUDPFirmwareCore::read(std::string& buffer, uint32_t address, bool clearBuffer)
-{ readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer); }
+{
+	readAdvanced(buffer, address, 1 /*size*/, 0 /*options*/, clearBuffer);
+}
 
 //==============================================================================
 void OtsUDPFirmwareCore::OtsUDPFirmwareCore::readAdvanced(std::string& buffer,

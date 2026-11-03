@@ -19,24 +19,24 @@ ots::FECommanderInterface::FECommanderInterface(
     const ConfigurationTree& theXDAQContextConfigTree,
     const std::string&       interfaceConfigurationPath)
     : Socket(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	             .getNode("HostIPAddress")
-	             .getValue<std::string>(),
-	         theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	             .getNode("HostPort")
-	             .getValue<unsigned int>())
+                 .getNode("HostIPAddress")
+                 .getValue<std::string>(),
+             theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+                 .getNode("HostPort")
+                 .getValue<unsigned int>())
     , FEVInterface(interfaceUID, theXDAQContextConfigTree, interfaceConfigurationPath)
     , interfaceSocket_(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                       .getNode("RemoteInterfaceIPAddress")
-	                       .getValue<std::string>(),
-	                   theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                       .getNode("RemoteInterfacePort")
-	                       .getValue<unsigned int>())
+                           .getNode("RemoteInterfaceIPAddress")
+                           .getValue<std::string>(),
+                       theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+                           .getNode("RemoteInterfacePort")
+                           .getValue<unsigned int>())
     , stateMachineName_(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                        .getNode("StateMachineName")
-	                        .getValue<std::string>())
+                            .getNode("StateMachineName")
+                            .getValue<std::string>())
     , configurationAlias_(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                          .getNode("ConfigurationAlias")
-	                          .getValue<std::string>())
+                              .getNode("ConfigurationAlias")
+                              .getValue<std::string>())
     , onlyRunTransitions_(false)
     , monitorRemoteAppStatus_(false)
     , halted_(false)
@@ -108,7 +108,9 @@ ots::FECommanderInterface::FECommanderInterface(
 
 //========================================================================================================================
 ots::FECommanderInterface::~FECommanderInterface(void)
-{ __COUT__ << "Destructor" << __E__; }  //end destructor()
+{
+	__COUT__ << "Destructor" << __E__;
+}  //end destructor()
 
 //==============================================================================
 /// AppStatusWorkLoop
@@ -178,10 +180,10 @@ void ots::FECommanderInterface::send(std::string buffer)
 		{
 			std::string response =
 			    TransceiverSocket::sendAndReceive(interfaceSocket_,
-				                                  buffer,
-				                                  5 /* timeout seconds */,
-				                                  0 /* timeout microseconds */,
-				                                  verbose);
+			                                      buffer,
+			                                      5 /* timeout seconds */,
+			                                      0 /* timeout microseconds */,
+			                                      verbose);
 
 			if("Done" != response)
 			{

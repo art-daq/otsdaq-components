@@ -12,21 +12,21 @@ FEOtsUDPTemplateInterface::FEOtsUDPTemplateInterface(
     const ConfigurationTree& theXDAQContextConfigTree,
     const std::string&       interfaceConfigurationPath)
     : Socket(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	             .getNode("HostIPAddress")
-	             .getValue<std::string>(),
-	         theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	             .getNode("HostPort")
-	             .getValue<unsigned int>())
+                 .getNode("HostIPAddress")
+                 .getValue<std::string>(),
+             theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+                 .getNode("HostPort")
+                 .getValue<unsigned int>())
     , FEVInterface(interfaceUID, theXDAQContextConfigTree, interfaceConfigurationPath)
     , OtsUDPHardware(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                     .getNode("InterfaceIPAddress")
-	                     .getValue<std::string>(),
-	                 theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                     .getNode("InterfacePort")
-	                     .getValue<unsigned int>())
+                         .getNode("InterfaceIPAddress")
+                         .getValue<std::string>(),
+                     theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
+                         .getNode("InterfacePort")
+                         .getValue<unsigned int>())
     , OtsUDPFirmwareDataGen(theXDAQContextConfigTree.getNode(interfaceConfigurationPath)
-	                            .getNode("FirmwareVersion")
-	                            .getValue<unsigned int>())
+                                .getNode("FirmwareVersion")
+                                .getValue<unsigned int>())
 {
 	// registration of FEMacro 'test' generated, Jan-20-2020 09:41:49, by 'admin' using
 	// MacroMaker.
