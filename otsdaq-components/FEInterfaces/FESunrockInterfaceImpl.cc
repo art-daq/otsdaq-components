@@ -223,8 +223,8 @@ void FESunrockInterface::sunrockStatus(__ARGS__)
 ///	PLACEHOLDER FE macro: records a named control value and logs the Zynq command.
 void FESunrockInterface::sunrockSetValue(__ARGS__)
 {
-	const std::string& name  = FEVInterface::getFEMacroConstArgument(argsIn, "name");
-	const std::string& value = FEVInterface::getFEMacroConstArgument(argsIn, "value");
+	const std::string name  = FEVInterface::getFEMacroConstArgument(argsIn, "name");
+	const std::string value = FEVInterface::getFEMacroConstArgument(argsIn, "value");
 
 	{
 		std::lock_guard<std::mutex> lock(simulatedMutex_);
