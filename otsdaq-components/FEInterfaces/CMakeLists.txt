@@ -9,9 +9,6 @@ cet_build_plugin(FEOtsUDPTemplateInterface otsdaq::FEInterface LIBRARIES REG  ot
 cet_make_library(LIBRARY_NAME FECommanderInterface SOURCE FECommanderInterfaceImpl.cc LIBRARIES PUBLIC otsdaq-components::DAQHardware otsdaq::FECore)
 cet_build_plugin(FECommanderInterface otsdaq::FEInterface LIBRARIES REG  otsdaq-components::FECommanderInterface  )
 
-cet_make_library(LIBRARY_NAME FESunrockInterface SOURCE FESunrockInterfaceImpl.cc LIBRARIES PUBLIC otsdaq::FECore)
-cet_build_plugin(FESunrockInterface otsdaq::FEInterface LIBRARIES REG  otsdaq-components::FESunrockInterface  )
-
 
 install_headers()
 install_source()
