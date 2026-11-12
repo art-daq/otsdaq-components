@@ -3,6 +3,7 @@
 #include "otsdaq-components/FEInterfaces/FEOtsUDPTemplateInterface.h"
 #include "otsdaq/Macros/CoutMacros.h"
 #include "otsdaq/MessageFacility/MessageFacility.h"
+#include <iomanip>  // std::setw etc.
 
 using namespace ots;
 
