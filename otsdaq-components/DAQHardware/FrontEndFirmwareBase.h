@@ -1,6 +1,7 @@
 #ifndef _ots_FrontEndFirmwareBase_h_
 #define _ots_FrontEndFirmwareBase_h_
 
+#include <cstdint>
 #include <iostream>
 #include <string>
 #include <vector>
