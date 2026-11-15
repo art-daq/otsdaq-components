@@ -165,7 +165,7 @@ std::array<std::string, 9> OtsSlowControlsInterface::getSettings(
     const std::string& /*Name*/)
 {
 	// units, display hi/lo, alarm hi, warn hi, warn lo, alarm lo, control hi/lo
-	return {"", "65535", "0", "", "", "", "", "", ""};
+	return {"", "255", "0", "", "", "", "", "", ""};
 }
 
 std::vector<std::vector<std::string>> OtsSlowControlsInterface::checkAlarmNotifications(
