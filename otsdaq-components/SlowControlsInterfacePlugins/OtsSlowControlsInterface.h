@@ -2,6 +2,9 @@
 #define _ots_OtsSlowControlsInterface_h
 
 #include <array>
+#include <deque>
+#include <map>
+#include <mutex>
 #include <string>
 
 #include "otsdaq/NetworkUtilities/ReceiverSocket.h"  // Make sure this is always first because <sys/types.h> (defined in Socket.h) must be first
@@ -34,6 +37,21 @@ class OtsSlowControlsInterface : public SlowControlsVInterface
 	std::vector<std::vector<std::string>> getAlarmsLog(const std::string& Name);
 	std::vector<std::vector<std::string>> checkAlarmNotifications(void);
 	std::array<std::string, 9>            getSettings(const std::string& Name);
+
+  private:
+	struct Sample
+	{
+		std::string time_, value_;
+	};
+
+	void        scanFiles();  // read new lines of aggregate files (throttled)
+
+	std::string                         dataPath_;
+	std::mutex                          mutex_;
+	time_t                              lastScan_ = 0;
+	std::map<std::string, std::streamoff> fileOffsets_;  // file -> bytes consumed
+	std::map<std::string, std::deque<Sample>> history_;  // channel -> samples
+	static const size_t                 MAX_HISTORY_ = 2000;
 };
 
 ///}
